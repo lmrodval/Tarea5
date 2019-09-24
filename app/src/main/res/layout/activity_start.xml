@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/activity_start_background"
     tools:context=".activities.ActivityStart">
 
     <!-- TODO Add Background Image -->
@@ -12,10 +13,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Prepárate los mejores platillos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/activity_login_btn_login"
-        app:layout_constraintEnd_toEndOf="@+id/activity_login_btn_register"
+        android:textColor="@android:color/white"
         android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/activity_login_btn_register"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_btn_login"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
@@ -39,6 +41,8 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/activity_login_btn_login"
-/>
+    />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
