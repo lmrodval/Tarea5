@@ -8,11 +8,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import iteso.mx.tarea05.R
+import iteso.mx.tarea05.activities.ActivityMain
 import iteso.mx.tarea05.activities.ActivityTutorial
 import iteso.mx.tarea05.interfaces.Listener
 import org.jetbrains.anko.find
 
-class TutorialFragment1: Fragment(){
+class TutorialFragment3: Fragment(){
 
     private lateinit var listener: Listener
 
@@ -21,9 +22,13 @@ class TutorialFragment1: Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.tutorial_fragment1, container, false )
-        view.find<Button>(R.id.fragment1_next_button).setOnClickListener{
-            listener.next(0)
+        val view = inflater.inflate(R.layout.tutorial_fragment3, container, false)
+        view.find<Button>(R.id.fragment3_finish_button).setOnClickListener{
+            //listener.next(2)
+
+        }
+        view.find<Button>(R.id.fragment3_back_button).setOnClickListener{
+            listener.previous(20)
         }
         return view
     }

@@ -12,7 +12,7 @@ import iteso.mx.tarea05.activities.ActivityTutorial
 import iteso.mx.tarea05.interfaces.Listener
 import org.jetbrains.anko.find
 
-class TutorialFragment1: Fragment(){
+class TutorialFragment2: Fragment() {
 
     private lateinit var listener: Listener
 
@@ -21,16 +21,19 @@ class TutorialFragment1: Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.tutorial_fragment1, container, false )
-        view.find<Button>(R.id.fragment1_next_button).setOnClickListener{
-            listener.next(0)
+        val view = inflater.inflate(R.layout.tutorial_fragment2, container, false)
+        view.find<Button>(R.id.fragment2_next_button).setOnClickListener {
+            listener.next(1)
+        }
+        view.find<Button>(R.id.fragment2_back_button).setOnClickListener {
+            listener.previous(10)
         }
         return view
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-
         listener = context as ActivityTutorial
     }
+
 }
